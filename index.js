@@ -3,6 +3,9 @@ var app = express();
 app.get('/', function(req, res) {
   res.send('Hello World!');
 });
-app.listen(process.env.port, function() {
-  console.log('Example app listening on port ' + process.env.port + '!');
+
+var port = normalizePort(process.env.PORT || '8081');
+
+app.listen(port, function() {
+  console.log('Example app listening on port ' + port + '!');
 });
