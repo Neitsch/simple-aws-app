@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server/index.js",
-    "test": "mocha",
+    "test": "mocha --compilers js:babel-core/register",
     "assemble": "webpack"
   },
   "babel": {
@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "enzyme": "^2.3.0",
     "mocha": "^2.4.5",
     "supertest": "^1.2.0"
   }
