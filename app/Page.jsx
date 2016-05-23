@@ -1,13 +1,11 @@
 import React from 'react';
 
-var CommentBox = React.createClass({
-  render: function() {
-    return (
-      <div className="commentBox">
+class CommentBox extends React.Component {
+  render() {
+    return <div className="commentBox">
         {this.props.title}
       </div>
-    );
   }
-});
+}
 
-module.exports = CommentBox;
+export default CommentBox;
