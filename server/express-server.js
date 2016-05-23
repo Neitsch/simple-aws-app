@@ -8,7 +8,7 @@ module.exports = require('express')()
     res.send(
       require('react-dom/server')
       .renderToString(
-        React.createElement(require('../dist/main'),{title:"Hello World!"}, {})
+        React.createElement(require('../dist/main'),{name:"World"}, {})
       )
     );
   })
