@@ -1,7 +1,8 @@
 var express = require('express');
 var app = express();
 app.get('/', function(req, res) {
-  res.send('Hello World!');
+  res.contentType('application/json');
+  res.send(process.env);
 });
 
 var port = process.env.PORT || '8081';
