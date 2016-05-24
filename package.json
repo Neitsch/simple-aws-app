@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "npm run lint && npm run assemble && npm run test",
     "start": "node server/index.js",
     "test": "mocha --compilers js:babel-core/register",
     "assemble": "webpack",
-    "validate-browser": "eslint app/**/* -c .eslintrc.browser.json",
-    "validate-server": "eslint server/**/* -c .eslintrc.server.json"
+    "lint": "npm run lint-browser && npm run lint-server",
+    "lint-browser": "eslint app/**/* -c .eslintrc.browser.json",
+    "lint-server": "eslint server/**/* -c .eslintrc.server.json"
   },
   "babel": {
     "presets": [

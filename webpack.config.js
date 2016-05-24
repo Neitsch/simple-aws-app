@@ -6,7 +6,7 @@ const config = {
   // Gives you sourcemaps without slowing down rebundling
   devtool: 'eval-source-map',
   entry: [
-    path.join(__dirname, 'app/Page.jsx')
+    path.join(__dirname, 'app/components/Page.jsx')
   ],
   output: {
     libraryTarget: 'commonjs2',
