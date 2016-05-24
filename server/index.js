@@ -1,5 +1,8 @@
-var port = process.env.PORT || '8081';
+'use strict';
 
-module.exports = require("./express-server").listen(port, function() {
-  console.log('Example app listening on port ' + port + '!');
+const express = require('./express-server');
+
+const port = process.env.PORT || '8081';
+
+module.exports = express.listen(port, () => {
 });

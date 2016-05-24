@@ -1,17 +1,21 @@
-var React = require('react');
+'use strict';
+
+const React = require('react');
+const Page = require('../dist/main').default;
+const ReactDomServer = require('react-dom/server');
 
 module.exports = require('express')()
-  .get('/', function(req, res) {
-    res.send("Hello World!");
+  .get('/', (req, res) => {
+    res.send('Hello World!');
   })
-  .get('/react', function(req, res) {
+  .get('/react', (req, res) => {
     res.send(
-      require('react-dom/server')
+      ReactDomServer
       .renderToString(
-        React.createElement(require('../dist/main').default,{name:"World"}, {})
+        React.createElement(Page, { name: 'World' }, {})
       )
     );
   })
-  .get('/health', function(req, res) {
+  .get('/health', (req, res) => {
     res.send();
   });
