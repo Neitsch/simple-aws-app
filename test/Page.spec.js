@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 import { expect } from 'chai';
-import Page from '../app/Page.jsx';
+import Page from '../app/components/Page.jsx';
 
 describe('<Page />', () => {
   it('did mount', () => {
