@@ -39,6 +39,7 @@
   "devDependencies": {
     "babel-eslint": "^6.0.4",
     "chai": "^3.5.0",
+    "cz-conventional-changelog": "^1.1.6",
     "enzyme": "^2.3.0",
     "eslint": "^2.10.2",
     "eslint-config-airbnb": "^9.0.1",
@@ -54,12 +55,25 @@
   },
   "config": {
     "pre-git": {
-      "commit-msg": "simple",
-      "pre-commit": ["npm run lint"],
-      "pre-push": ["npm run test"],
-      "post-commit": ["git status"],
-      "post-checkout": ["npm install"],
-      "post-merge": ["npm install"]
+      "commit-msg": "conventional",
+      "pre-commit": [
+        "npm run lint"
+      ],
+      "pre-push": [
+        "npm run test"
+      ],
+      "post-commit": [
+        "git status"
+      ],
+      "post-checkout": [
+        "npm install"
+      ],
+      "post-merge": [
+        "npm install"
+      ]
+    },
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
     }
   }
 }
